@@ -16,3 +16,191 @@ printf("\n");
 printf("###퀴즈를 종료합니다###\n");
 return 0;
 }
+
+#include <stdio.h>
+
+int main(){
+int answer;
+
+printf("한시간은 몇분일까요");
+scanf("%d", &answer);
+
+  if(answer == 60)
+{  printf("*** 맞습니다\n");
+    printf("한시간은 60분입니다.\n");
+}
+
+else{
+
+  printf("*오답 한시간은 60이다 병신아*");
+}
+printf("\n");
+printf("###퀴즈를 종료합니다###\n");
+return 0;
+
+
+#include <stdio.h>
+
+int main(){
+int answer;
+
+printf("### 이 프로그램은 양수, 음수, 0을 판별\n");
+printf("숫자 하나 입력");
+scanf("%d", &answer);
+
+  if(answer > 0)
+{  printf("양수입니다.\n");}
+
+  else{
+
+    if (answer == 0)
+    {
+      printf("0입니다");
+      
+    }
+    else
+    {
+      printf("음수입니다.\n");
+    }
+  }
+return 0;
+}
+
+
+#include <stdio.h>
+
+int main(){
+int answer;
+
+printf("### 이 프로그램은 양수, 음수, 0을 판별\n");
+printf("숫자 하나 입력");
+scanf("%d", &answer);
+
+  if(answer > 0)
+{  printf("양수입니다.\n");}
+
+  else if (answer == 0)
+    {
+      printf("0입니다");
+    }
+    else
+    {
+      printf("음수입니다.\n");
+    }
+  
+
+  return 0;
+}
+
+if 다음 세미콜론은 참이면 실행안한다는 의미로 사용됨
+
+#include <stdio.h>
+
+int main(){
+
+    int score;
+
+    printf("숫자 등급 문자로 바꿈\n");
+    printf("1~5까지 별점을 숫자로 입력: ");  
+    scanf("%d", &score);
+
+    switch (score)
+      {
+        case 5:
+        printf("최우수 등급\n");
+        break;
+        case 4:
+        printf("우수 등급\n");
+        break;
+        case 3:
+        printf("보통 등급\n");
+        break;
+        case 2:
+        printf("낮은 등급\n");
+        break;
+        case 1:
+        printf("최하단 등급\n");
+        break; /*하래 등급 안보이게 해줌*/
+        
+      }
+
+        printf("##프로그램 종료##");
+      }
+
+
+#include <stdio.h>
+
+int main(){
+
+    int score;
+
+    printf("숫자 등급 문자로 바꿈\n");
+    printf("1~5까지 별점을 숫자로 입력: ");  
+    scanf("%d", &score);
+
+    switch (score)
+      {
+        case 5:
+        case 6: /*추가로 넣고 싶으면 case하고 숫자*/
+        printf("*************\n");
+        printf("최우수 등급\n");
+        printf("**************\n");
+        break;
+        case 4:
+        printf("우수 등급\n");
+        break;
+        case 3:
+        printf("보통 등급\n");
+        break;
+        case 2:
+        printf("낮은 등급\n");
+        break;
+        case 1:
+        printf("최하단 등급\n");
+        break;
+
+        default: printf("잘못된 입력입니다. 1부터 5까지만 처리합니다\n");
+        break;
+      }
+
+        printf("##프로그램 종료##");
+      }
+
+----------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() {
+
+  int score;
+
+  printf("알파벳 등급을 설명합니다\n");
+  printf("A~F까지 별점을 문자로 입력: ");
+  scanf("%d", &score);
+
+  switch (score) {
+  case 'A':
+    printf("*************\n");
+    printf("최우수 등급\n");
+    printf("**************\n");
+    break;
+  case 'B':
+    printf("우수 등급\n");
+    break;
+  case 'C':
+    printf("보통 등급\n");
+    break;
+  case 'D':
+    printf("낮은 등급\n");
+    break;
+  case 'F':
+    printf("최하단 등급\n");
+    break;
+
+  default:
+    printf("잘못된 입력입니다. 1부터 5까지만 처리합니다\n");
+    break;
+  }
+
+  printf("##프로그램 종료##");
+}
