@@ -1,0 +1,104 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h> /* 시간쓰려면 넣어야함*/
+int main(){         
+  
+  int number;
+
+     /*initialize random number generator*/
+  
+  printf("time: %d\n", (int)time(NULL));
+  srand(time(NULL));
+  number = rand();
+  printf("%d\n", number);
+  return 0;
+}
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>	 /* 시간쓰려면 넣어야함*/
+int main() {
+
+  int MAX = 100000;  /*중간에 만을 안넣어도 됌*/
+  int number;
+
+  /*initialize random number generator*/
+
+  printf("time: %d\n", (int)time(NULL));
+  printf("RAND_MAX: %d\n", RAND_MAX);
+  srand(time(NULL));
+
+  number = rand();
+  printf("%d\n", number);
+  return 0;
+}
+
+<주사기>
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h> /* 시간쓰려면 넣어야함*/
+int main() {
+
+  int number;
+  int dice_roll;
+  
+  /*initialize random number generator*/
+
+  printf("time: %d\n", (int)time(NULL));
+  printf("RAND_MAX: %d\n", RAND_MAX);
+  srand(time(NULL));
+
+  number = rand();
+  dice_roll=rand()%6+1; /*1 to 6*/
+  
+  printf("rand(): %d\n", number);
+  printf("DIce roll: %d\n", dice_roll);
+  printf("rand(): %d\n", number);
+  printf("rand(): %d\n", number);
+  return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h> /* 시간쓰려면 넣어야함*/
+int main() {
+
+  int number;
+  int dice_roll;
+  
+  /*initialize random number generator*/
+
+  printf("time: %d\n", (int)time(NULL));
+  printf("RAND_MAX: %d\n", RAND_MAX);
+  srand(time(NULL));
+
+  number = rand();
+  dice_roll=rand()%6+1; /*1 to 6*/
+  
+  printf("rand(): %d\n", number);
+  printf("DIce roll: %d\n", dice_roll);
+  
+  printf("rand(): %d\n", number);
+  printf("rand(): %d\n", number);
+  
+  double uniform;
+  uniform=(double)rand()/(RAND_MAX+1.0);     /*1.0이라 더블이 되어서 숫자가 표현 가능해짐*/
+  printf("uniform distribution:%f\n", uniform);
+  
+  
+  
+  
+  return 0;
+}
+
+렌드믹스는 
+111111111111 31bit
+011111111111 32bit
+
+1더하면 반올림. 
+렌드믹스+1
+-10000000000
