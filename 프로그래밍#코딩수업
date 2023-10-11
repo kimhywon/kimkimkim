@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){
+int answer;
+
+printf("한시간은 몇분일까요");
+scanf("%d", &answer);
+
+  if(answer == 60)
+{  printf("*** 맞습니다\n");
+    printf("한시간은 60분입니다");
+}
+
+
+printf("\n");
+printf("###퀴즈를 종료합니다###\n");
+return 0;
+}
