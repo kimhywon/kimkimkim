@@ -1,0 +1,287 @@
+#include <stdio.h>
+
+int main(){
+int score;
+
+printf("점수를 하나 입력하세요\n");
+scanf("%d", &score);
+
+  if(score>=90)
+    { printf("A입니다.\n");}
+
+  else if (score>=80)
+  {
+    printf("B\n");
+  }
+  else if (score>=70)
+  {
+    printf("C\n");
+  }
+  else if (score>=60)
+  {
+    printf("D\n");
+  }
+  else if (score>=0)
+  {
+    printf("f\n");
+  }
+  
+return 0;
+}
+
+switch(score) 정수밖에 안됌!!!!!!!!!!!!!
+
+while loo
+
+
+--------------------------------------------------------------------------------------------------
+
+
+#include <stdio.h>
+
+int main(){
+  int count;
+
+  count =1;
+
+  while (count <= 3)
+  {
+      printf("count = %d\n", count);
+      count=count+1;  \*이거 안 넣으면 무한 반복*\
+		  무조건 프린트 아래에 넣어야함. 
+ }
+
+  printf("###프로그램종료\n");
+  return 0;
+}
+
+---------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main(){
+  int count;
+  int sum = 0;
+
+  count = 1; 
+
+  while (count <= 3)
+  {
+      sum = sum + count;
+      printf("count = %d\tsum = %d\n", count, sum);
+      count=count + 1;
+  }
+
+  printf("###합은: %d\n", count);
+  return 0;
+}
+
+--------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+
+/*숫자 하나를 입력 받아 짝수 홀수 판별*/
+
+int main(){
+
+  int number = 0;
+
+  while (number != 999)
+    {
+  printf("###짝수 홀수를 판별합니다\n");
+  printf("숫자 하나 입력(999 입력시 종료): ");
+  scanf("%d", &number);
+
+  if (number %2==0)
+  {
+    printf("짝수입니다\n");
+  }
+  else 
+  {
+    printf("홀수입니다\n");
+  }
+    }
+   printf("프로그램종료\n");
+  return 0;
+}
+
+
+
+#include <stdio.h>
+
+int main(){
+  int count;
+  int sum = 0;
+
+  count = 1; 
+
+  do
+  {
+      sum = sum + count;
+      printf("count = %d\tsum = %d\n", count, sum);
+      count=count + 1;
+  }
+
+  printf("###합은: %d\n", count);
+  return 0;
+}while (count !=4);
+
+reture 0;
+}
+
+
+
+
+#include <stdio.h>
+
+int main(){
+  int count;
+
+  for (count =1; count <=10; count=count+1)
+    {
+      printf("count=%d\n", count);
+    }
+    
+
+  printf("###프로그램종료\n");
+  return 0;
+}
+
+
+#include <stdio.h>
+
+int main(){
+  int i;
+
+  for (i =1; i <=10; i++)
+    {
+      printf("i=%d\n", i);
+    }
+    
+
+  printf("###프로그램종료\n");
+  return 0;
+}
+
+
+
+#include <stdio.h>
+
+int main() {
+
+
+   int number = 0;
+   int i;
+  printf("구구단 몇단을 출력할까요?");
+  scanf("%d", &number);
+
+
+  for(number=number; number<=9; number++)
+    { printf("구구단을 %d출력합니다\n", number);
+  
+  for (i=1; i<=9; i++)  
+  {
+    printf("%d*%d = %d\n", number, i, number*i);
+  }
+     }
+  return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int i, j;
+
+    for (i = 1; i <= 10; i++) {
+        for (j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+ 
+#include <stdio.h>
+
+int main() {
+    int i;
+
+  
+
+    for (i = 1; i <= 5; i++) {
+        
+            printf("i=%d\n", i);
+      if (i==2)
+      {
+        break;   /*2까지 출력*/
+      }
+    }
+
+    return 0;
+}
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int i;
+
+  
+
+    for (i = 1; i <= 5; i++) {
+        
+           
+      if (i==3)
+      {
+        continue;   /*3넘어서 출력*/
+      }
+      printf("i = %d\n", i);
+    }
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+/*숫자 하나를 입력 받아 짝수 홀수 판별*/
+
+int main(){
+
+  int number = 0;
+
+  while (1)
+    {
+  printf("###짝수 홀수를 판별합니다\n");
+  printf("숫자 하나 입력(999 입력시 종료): ");
+  scanf("%d", &number);
+
+  if (number == 999)   /*or   if (number !=999)*/
+  {
+    break;
+  }
+
+  if (number %2==0)
+  {
+    printf("짝수입니다\n");
+  }
+  else 
+  {
+    printf("홀수입니다\n");
+  }
+    }
+   printf("프로그램종료\n");
+  return 0;
+}
+
+
+바로 종료.
+
+
+
