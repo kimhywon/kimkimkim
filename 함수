@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int dice()
+{
+  int roll;
+
+  srand(time(NULL));
+  roll = rand()%6+1;
+
+  return roll;
+}
+
+int main(void) 
+{
+ int number;
+ int dice_roll;
+
+ srand(time(NULL));
+
+ dice_roll=dice(); 
+ printf("dice roll: %d\n", dice_roll);
+
+  /* 주사위 여러번 던지는 게임*/
+  /*
+    *roll 1: 1
+    *roll 2: 4
+    *roll 3: 3
+    *roll 4: 1
+    */
+  return 0;
+
+}
+
+int dice_mltiple(int time)
+{
+  int 1;
+  for(i=1: i<=time; i++)
+    {
+  printf("roll %d: $d\n", 1, dice());
+    }
+}  /*end of add function*/
