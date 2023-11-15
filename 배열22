@@ -1,0 +1,50 @@
+
+  
+  
+}
+
+#include <stdio.h>
+
+void decrement(int n)
+{
+  n = n -1;
+}
+
+int main()
+{
+  int number = 100;
+  decrement(number);
+
+  printf("%d\n", number);
+// 100? 99 ->100
+  return 0;
+  
+}
+
+#include <stdio.h>
+
+void decrement(int n[], int length)
+{
+  int i;
+  for(i = 0; i < length; i++)
+    {
+      n[i] = n[i] - 1;
+    }
+}
+
+int main()
+{
+  int numbers[] = {10, 20, 30};
+  
+  decrement(numbers, 3);
+
+  int i;
+
+  for (i =0; i < 3; i++)
+    {
+      printf("numbers[%d] = %d\n", i, numbers[i]);
+      
+    }
+  // 숫자 몇? 9 19 29
+}
+  
