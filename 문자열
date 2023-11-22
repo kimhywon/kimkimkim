@@ -1,0 +1,84 @@
+#include <stdio.h>
+
+int main(void) {
+
+  char massage[]= "hello world";
+  printf("%s", massage);
+  puts(massage);
+
+  printf("how mant students? ");
+  int students = 0;
+  scanf("%d", &students);
+  printf("we have %d students\n", students);
+  printf("address %p\n", &students);
+
+  char input[10];
+  printf("Enter a word: ");
+  scanf("%s", input);
+  printf("%s\n", input);
+  printf("address %p\n", input);
+  // input 에는 & 없이 
+  return 0;
+}
+
+#include <stdio.h>
+
+int main(void) {
+
+  char soure[20] = "hello";
+  char destination[20];
+  // destination = soure 
+  //    4000          2000
+  //   지워서져서 2000 안됨 고칠수가 없음 2000을 덮어 씌울수 없음. 손으로 한자한자 복사를 다해야함 지저분한 상황.
+  destination = soure;
+
+  printf("%s", soure);
+  printf("%s\n", destination);
+
+  return 0;
+}
+
+#include <stdio.h>
+
+int main(void) {
+
+  char soure[20] = "hello!";
+  char destination[20];
+
+
+  int i = 0;
+  for (i = 0; i < 7; i++)
+    {
+      destination[i] = soure[i];
+      
+    }
+// 복사를 하나하나 복사했음
+  printf("score: %s\n", soure);
+  printf("destination: %s\n", destination);
+
+  return 0;
+}
+
+#include <stdio.h>
+
+int main(void) {
+
+  char soure[20] = "hello!";
+  char destination[20];
+
+/*
+  int i = 0;
+  for (i = 0; i < 7; i++)
+    {
+      destination[i] = soure[i];
+      
+    }
+     복사를 하나하나 복사했음
+*/ 
+  strcpy(destination, soure);
+  // 자동복사
+  printf("score: %s\n", soure);
+  printf("destination: %s\n", destination);
+
+  return 0;
+}
